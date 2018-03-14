@@ -54,25 +54,25 @@ This method contains code to pass credit card information and necessary billing 
   ** If the payment is success, you need to obtain Transaction ID of the payment, then call $this->onPaymentSuccess($row, $transactionId); to finish the process, and finally, redirect subscribers to subscription complete page
   ** If the payment is failred, you need to obtain the reason of the error, store it in the session and redirect subscribers to the payment failure page
   ** The code skeleton for this process is:
-    ```php
-    // Success is the result of the payment process
-$success = true;
+    
+    ```php    
+    	$success = true;
 
-if ($success)
-{
-	$transactionId = 'the_id_of_the_transaction';
-	$this->onPaymentSuccess($row, $transactionId);
+	if ($success)
+	{
+		$transactionId = 'the_id_of_the_transaction';
+		$this->onPaymentSuccess($row, $transactionId);
 
-	// Redirect to the registration complete page
-	$app->redirect(JRoute::_('index.php?option=com_eventbooking&view=complete&Itemid=' . $Itemid, false));
-}
-else
-{
-	// Store the reason of the error so that it is being displayed on payment failure page
-	$errorReason = 'the_returned_error_message';
-	JFactory::getSession()->set('omnipay_payment_error_reason', $errorReason);
+		// Redirect to the registration complete page
+		$app->redirect(JRoute::_('index.php?option=com_eventbooking&view=complete&Itemid=' . $Itemid, false));
+	}
+	else
+	{
+		// Store the reason of the error so that it is being displayed on payment failure page
+		$errorReason = 'the_returned_error_message';
+		JFactory::getSession()->set('omnipay_payment_error_reason', $errorReason);
 
-	// Redirect to payment failure page
-	$app->redirect(JRoute::_('index.php?option=com_eventbooking&view=failure&Itemid=' . $Itemid, false));
-}
+		// Redirect to payment failure page
+		$app->redirect(JRoute::_('index.php?option=com_eventbooking&view=failure&Itemid=' . $Itemid, false));
+	}
     ```
