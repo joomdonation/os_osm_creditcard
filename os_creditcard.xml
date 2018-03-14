@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install version="1.0" type="plugin" group="payment">
+    <name>osmplugin</name>
+    <title>MP Creditcard</title>
+    <author>Tuan Pham Ngoc</author>
+    <creationDate>14-03-2018</creationDate>
+    <copyright>Copyright 2012 - 2018 Ossolution Team</copyright>
+    <license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+    <authorEmail>tuanpn@joomdonation.com</authorEmail>
+    <authorUrl>www.joomdonation.com</authorUrl>
+    <version>2.12.2</version>
+    <description>Credit card base payment plugin (like Stripe Or Authorize.net) For Membership Pro Extension
+    </description>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_osmembership/elements">
+                <field name="mode" type="list" label="Payment Mode" description="Set to Test Mode Or Live Mode">
+                    <option value="0">Test Mode</option>
+                    <option value="1">Live Mode</option>
+                </field>
+                <!--
+                    <field name="merchant_id" type="text" size="40" label="Merchant ID" description="Enter your payment gateway Merchant ID" default=""></field>
+                    <field name="merchant_key" type="text" size="40" label="Merchant Key" description="Enter your payment gateway Merchant Key" default=""></field>
+                -->
+                <field name="icon" type="text" size="40" label="Icon"
+                       description="If you want to show icon instead of payment method title on subscription form, upload it to media/com_osmembership/assets/images/paymentmethods folder and enter the name of the file here. For example os_paypal.png"
+                       default=""></field>
+                <field name="payment_fee_amount" type="text" label="Payment Processing Fee ($)" description=""></field>
+                <field name="payment_fee_percent" type="text" label="Payment Processing Fee (%)" description=""></field>
+            </fieldset>
+        </fields>
+    </config>
+    <files>
+        <filename>os_creditcard.php</filename>
+        <folder>lib</folder>
+    </files>
+</install>
