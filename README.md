@@ -56,8 +56,8 @@ This method contains code to pass credit card information and necessary billing 
   ** The code skeleton for this process is:
     
     ```php    
-    	$success = true;
-
+    $success = true;
+	
 	if ($success)
 	{
 		$transactionId = 'the_id_of_the_transaction';
