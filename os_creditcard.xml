@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<install version="1.0" type="plugin" group="payment">
+<install version="1.0" type="osmplugin" group="payment">
     <name>osmplugin</name>
     <title>MP Creditcard</title>
     <author>Tuan Pham Ngoc</author>
