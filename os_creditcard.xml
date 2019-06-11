@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <install version="1.0" type="osmplugin" group="payment">
-    <name>osmplugin</name>
+    <name>os_creditcard</name>
     <title>MP Creditcard</title>
     <author>Tuan Pham Ngoc</author>
     <creationDate>14-03-2018</creationDate>
